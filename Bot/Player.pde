@@ -42,7 +42,7 @@ class Player {
   void playRandom() {
     PVector pos = getPos(random(size * size));
     int x = int(pos.x), y = int(pos.y);
-    if (knowledge[x][y] >= BOMB) {playRandom(); return;} // get a random unknown position
+    if (knowledge[x][y] >= BOMB) {playRandom(); return;} // get a random UNKNOWN position
     playMove(pos, CLK_LFT);    
   }
   
@@ -203,12 +203,10 @@ class Player {
       rect(x * d, y * d, d, d);
     }
     
-    //if (c != 0){
-        fill(0);
-        textAlign(CENTER);
-        textSize(d);
-        text(c, (x + 0.5) * d, (y + 1) * d, d);
-    //}
+    fill(0);
+    textAlign(CENTER);
+    textSize(d);
+    text(c, (x + 0.5) * d, (y + 1) * d, d);
     noFill();
     stroke(255, 0, 0);
     rect(last_move.x * d, last_move.y * d, d, d);
