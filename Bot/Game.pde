@@ -109,6 +109,7 @@ class Game {
     ended = true;
   }
   
+  // EntryPoint
   void clickCell (int x, int y) {
     if (start) {
       resetBombs(new PVector(x, y));
