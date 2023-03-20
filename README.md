@@ -1,5 +1,6 @@
 # Minesweeper-Bot
 I created a bot to solve Minesweeper. This is how it works:
+Details on how to recreate the error in the end. Do read before attempting.
 
 ## Flow Diagram:
 ![Flow diagram](https://i.stack.imgur.com/J95FK.png)
