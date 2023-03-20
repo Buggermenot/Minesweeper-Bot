@@ -4,22 +4,25 @@ float d;
 int games = 0;
 boolean view = false, pause = false;
 
-int seed = int(random(10000));
-//int seed = 6094;
+int seed;
 
 Game minesweeper;
 Player bot;
 
 void setup() {
   size(400, 600);
-  randomSeed(seed);
+  
+  // Fix Seed value here and comment line 23 in reset()
+  // seed = 2902
+  
   reset();
 }
 
 void reset() {
   games++;
+  seed = int(random(10000));
   println("NEW GAME:", games, " SEED: ", seed);
-  //randomSeed(seed);
+  randomSeed(seed);
   minesweeper = new Game();
   bot = new Player();
   d = minesweeper.d;
